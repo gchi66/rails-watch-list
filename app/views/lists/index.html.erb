@@ -1,0 +1,11 @@
+<h1 text-align = "center">Check out all these movie lists!</h1>
+
+<div class = list>
+  <% @lists.each do |list| %>
+    <p>
+      <%= link_to list.name, list_path(list) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Create a new list", new_list_path %>
